@@ -10,6 +10,8 @@ const URL = 'http://localhost:8080/gxa/sc/json/search';
 
 class App extends Component {
 
+
+
   constructor(props){
     super(props)
     this.state = {
