@@ -13,7 +13,7 @@ const values = queryString.parse(history.location.search);
 
 
 class App extends Component {
-  
+  console.log();
   constructor(props){
     super(props)
     this.state = {
