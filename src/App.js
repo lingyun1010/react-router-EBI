@@ -1,6 +1,5 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
-import './App.css';
 import {withRouter} from 'react-router-dom';
 import SwitchRoute from './SwitchRoute';
 import queryString from 'query-string';
