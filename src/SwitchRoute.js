@@ -1,10 +1,13 @@
 import React from 'react';
 import {Switch,Route,withRouter} from 'react-router-dom';
 import FetchLoader from "react-faceted-search";
+import NotFoundPage from './ErrorPage/NotFoundPage/NotFoundPage.js';
 
-const About = () =>(
-	<div> Home Page</div>
-);
+import AboutPage from './ErrorPage/AboutPage.js';
+
+// const About = () =>(
+// 	<div className="NotFoundPage"> Home Page</div>
+// );
 
 
 const SwitchRoute = ({value,species,category,ResultElementClass,handleSelections,routepath, nextSelectedFacets}) => (
@@ -21,7 +24,8 @@ const SwitchRoute = ({value,species,category,ResultElementClass,handleSelections
 			<Route exact path={routepath} render={props => (<FetchLoader {...props} nextSelectedFacets={nextSelectedFacets} handleSelections={handleSelections} ResultElementClass={ResultElementClass} 
 			host={`http://localhost:8080/gxa/sc/json/search?${category}=${value}&species=${species}`} resource={''} species={species?species.replace('+',' '):species}/>)}/>
 
-			<Route exact path="" component={About}/>
+			<Route exact path="/" component={AboutPage}/>
+			<Route component={NotFoundPage} />
 
 		</Switch>
 
